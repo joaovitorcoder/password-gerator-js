@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="../style/style.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <header class="d-flex justify-content-center align-items-center text-white">
+    PassW gerator
+    <span class="mx-2">
+      ||
+    </span>
+    <a href="https://www.instagram.com/joaospw" target="_blank">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </header>
+
+  <main class="d-flex justify-content-center align-items-center">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">PassW Gerator</h5>
+        <div class="input-group my-3">
+          <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="Senha" id="senha" readonly>
+          <button type="button" class="btn btn-outline-secondary" onclick="gerarSenha()">Criar</button>
+          <button type="button" class="btn btn-outline-success" onclick="copiarSenha()">Copiar</button>
+        </div>
+        <div class="checks">
+        <label><input type="checkbox" id="maiusculas" checked> Maiúsculas</label>
+        <label><input type="checkbox" id="minusculas" checked> Minúsculas</label>
+        <label><input type="checkbox" id="numeros" checked> Números</label>
+        <label><input type="checkbox" id="simbolos"> Símbolos</label>
+      </div>
+      </div>
+      <div class="card-footer text-body-secondary" id="status">
+        Status
+      </div>
+    </div>
+  </main>
+<script src="../js/script.js"></script>
+</body>
+</html>
