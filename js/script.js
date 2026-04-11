@@ -42,10 +42,19 @@ function gerarSenha(){
 
         let senha = ''
         
+        // "Pega um caractere aleatório da string caracteres e adiciona na senha"
         for (let i = 0; i < tamanho; i++) {
-            senha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+          senha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
         }
-        
+
+        // Math.random() - Gera um número aleatório entre 0 e 1, Ex: 0.37482
+        // Math.random() * caracteres.length - Multiplica pelo tamanho da string
+        // Math.floor() - Arredonda para baixo, Ex: 3.9 -> 3
+        // caracteres.charAt(3) - pega o caracter naquela posição, Ex: "abcde" → posição 3 = "d"
+        // senha += "d"
+        // Vai repetir isso mais 9 vezes 
+
+
         senhaInput.value = senha
     }
     
