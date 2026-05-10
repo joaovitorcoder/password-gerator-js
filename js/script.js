@@ -1,11 +1,10 @@
 const senhaInput = document.getElementById("senha")// input que vai aparecer a senha
 
-const tamanho = 10 // Valor ja definido pelo código
-
 let statusMsg = document.getElementById("status")// card footer, onde ira aparecer a mensagem 
 
-
 function gerarSenha(){
+    const input = Number(document.getElementById("inputTamanho").value) // Passa o tamanho da senha a ser feita
+    const tamanho = input // Recebe o tamanho da senha a ser feita
 
     const maiusculas = document.getElementById("maiusculas").checked
     const minusculas = document.getElementById("minusculas").checked
@@ -15,8 +14,11 @@ function gerarSenha(){
     if (!maiusculas && !minusculas && !numeros && !simbolos){
         alert("Selecione pelo menos uma opção!")
         return
-    } else {
-
+    } else if (!input) {
+      alert("Tamanho não definido!")
+      return
+    }
+    else {
         const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         const letrasMinusculas = "abcdefghijklmnopqrstuvwxyz"
         const nums = "0123456789"
@@ -54,6 +56,8 @@ function gerarSenha(){
         // senha += "d"
         // Vai repetir isso mais 9 vezes 
 
+
+        console.log(senha.length)
 
         senhaInput.value = senha
     }
