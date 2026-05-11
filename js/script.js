@@ -82,8 +82,10 @@ function copiarSenha() {
   if (senhaInput.value !== "") {
     navigator.clipboard.writeText(senhaInput.value);
     statusMsg.innerHTML = "Senha copiada!"
+    statusMsg.style.color = "green"
   } else {
     statusMsg.innerHTML = "Gere uma senha primeiro!"
+    statusMsg.style.color = "red"
   }
 }
 
