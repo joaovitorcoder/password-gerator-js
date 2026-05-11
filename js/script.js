@@ -28,7 +28,7 @@ function gerarSenha(){
     if (!maiusculas && !minusculas && !numeros && !simbolos){
         alert("Selecione pelo menos uma opção!")
         return
-    } else if (!valorTamanho) {
+    } else if (!valorTamanho || valorTamanho <= 0) {
       alert("Tamanho não definido!")
       return
     }
